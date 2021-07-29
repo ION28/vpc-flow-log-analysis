@@ -85,15 +85,9 @@ const getEdges = (requests: Request[], minOccurrencesThreshold: number = 10, top
     return edges;
 }
 
-const randomIPs = {};
 const getNode = (address: string, port: number): Node => {
     if (address in knownAddresses) {
         return knownAddresses[address];
-    } else if (address in randomIPs) {
-        return randomIPs[address];
     }
-    
-    const randomizedIP = randomip('0.0.0.0', 0);
-    randomIPs[address] = randomizedIP;
-    return randomizedIP;
+    return address;
 }
