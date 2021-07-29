@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "generate-graph": "ts-node ./graph-generator/index.ts",
+    "build-graph": "ts-node ./graph-generator/build-graph.ts",
     "client": "./node_modules/http-server/bin/http-server client"
   },
   "repository": {
