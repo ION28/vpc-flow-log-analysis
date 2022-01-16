@@ -24,6 +24,14 @@ After setup, you can run the graph generator, which downloads flow logs from S3 
 npm run generate-graph
 ```
 
+Alternatively, run the following if the files are local already
+```bash
+zcat flowlogs/* > flow.txt
+export LOG_TEXT=flow.txt
+export NODE_OPTIONS="--max-old-space-size=8192"
+npm run build-graph
+```
+
 ### The Client
 After running the graph generator, you can start the client using 
 ```
